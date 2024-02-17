@@ -239,6 +239,11 @@ void SubdominantAudioProcessor::setStateInformation (const void* data, int sizeI
         }
 }
 
+/* 1-pole RC low-pass/high-pass filter, based on:
+** https://github.com/8bitbubsy/pt2-clone/blob/master/src/pt2_rcfilters.c
+** https://www.musicdsp.org/en/latest/Filters/116-one-pole-lp-and-hp.html
+*/
+
 void SubdominantAudioProcessor::clearOnePoleFilterState(OnePoleFilter_t* f)
 {
     f->tmpL = f->tmpR = 0.0;
@@ -264,6 +269,11 @@ void SubdominantAudioProcessor::onePoleLPFilter(OnePoleFilter_t* f, const float*
     f->tmpR = (*inR * f->a1) + (f->tmpR * f->a2);
     *outR = (float)f->tmpR;
 }
+
+/* 2-pole RC low-pass filter with Q factor, based on:
+** https://github.com/8bitbubsy/pt2-clone/blob/master/src/pt2_rcfilters.c
+** https://www.musicdsp.org/en/latest/Filters/38-lp-and-hp-filter.html
+*/
 
 void SubdominantAudioProcessor::clearTwoPoleFilterState(TwoPoleFilter_t* f)
 {
