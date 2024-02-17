@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="lexREB" name="Sub_Dominant" projectType="audioplug" useAppConfig="0"
+<JUCERPROJECT id="lexREB" name="SubDominant" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
               pluginManufacturer="_astriid_" pluginFormats="buildVST3"
-              lv2Uri="http://lv2plug.in/ns/ext/urid/Sub_Dominant">
-  <MAINGROUP id="iLWE3U" name="Sub_Dominant">
+              lv2Uri="http://lv2plug.in/ns/ext/urid/SubDominant">
+  <MAINGROUP id="iLWE3U" name="SubDominant">
     <GROUP id="{605112D6-A50C-6757-5734-E8B7338B0C41}" name="Source">
       <FILE id="pUTfc8" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
