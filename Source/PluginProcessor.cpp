@@ -1,4 +1,4 @@
-/*
+BLE/*
   ==============================================================================
 
     This file contains the basic framework code for a JUCE plugin processor.
@@ -417,7 +417,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout SubdominantAudioProcessor::c
     parameters.push_back(std::make_unique<juce::AudioParameterInt>(juce::ParameterID{ "LINE/INST", 1 }, "Line/Inst", 0, 1, 1));
 
     parameters.push_back(std::make_unique<juce::AudioParameterFloat>(juce::ParameterID{"GAIN AMOUNT", 1 }, "Gain Amount", juce::NormalisableRange<float>(0.f, 1.f, 0.01f), 0.5f));
-    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(juce::ParameterID{"BLEND AMOUNT", 1 }, "Blend Amount", juce::NormalisableRange<float>(0.f, 1.f, 0.01f), 0.0f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(juce::ParameterID{"BLEND AMOUNT", 1 }, "Blend Amount", juce::NormalisableRange<float>(0.f, 1.f, 0.01f), 1.0f));
     parameters.push_back(std::make_unique<juce::AudioParameterFloat>(juce::ParameterID{ "MASTER VOLUME", 1 }, "Master Volume", juce::NormalisableRange<float>(0.f, 1.f, 0.01f), 0.5f));
 
 
