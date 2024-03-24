@@ -336,8 +336,8 @@ void SubdominantAudioProcessor::fullWaveRect(const float* inL, const float* inR,
                          std::abs(*inR * 20.f) > 1.f ? 2.f : std::abs(*inR * 20.f) };
 
     /* re-center back to +/- 1.0 range */
-    out->left  = (rectify[0] - 1.f) * out->volume;
-    out->right = (rectify[1] - 1.f) * out->volume;
+    out->left  = rectify[0] == 0.f ? 0.0f : (rectify[0] - 1.f) * out->volume;
+    out->right = rectify[1] == 0.f ? 0.0f : (rectify[1] - 1.f) * out->volume;
 }
 
 void SubdominantAudioProcessor::mixWaves()
