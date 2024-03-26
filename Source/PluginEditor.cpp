@@ -13,7 +13,7 @@
 SubdominantAudioProcessorEditor::SubdominantAudioProcessorEditor (SubdominantAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
-    juce::LookAndFeel::setDefaultLookAndFeel(&newLookAndFeel);
+    setLookAndFeel(&newLookAndFeel);
 
     setRepaintsOnMouseActivity(false);
 
@@ -57,7 +57,7 @@ SubdominantAudioProcessorEditor::SubdominantAudioProcessorEditor (SubdominantAud
 
 SubdominantAudioProcessorEditor::~SubdominantAudioProcessorEditor()
 {
-    juce::LookAndFeel::setDefaultLookAndFeel(nullptr);
+    setLookAndFeel(nullptr);
 }
 
 //==============================================================================
